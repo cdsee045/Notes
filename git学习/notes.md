@@ -76,6 +76,7 @@ vi .gitignore         ##编辑gitignore文件
 ```
 
 <br>
+
 ###SSH配置和克隆仓库  
 
 将代码push到远程仓库有两种方法一种是https，一种是SSH
