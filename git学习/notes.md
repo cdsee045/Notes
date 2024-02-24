@@ -1,3 +1,4 @@
+[TOC]
 ###git配置
 >设置用户名和邮箱
 
@@ -31,7 +32,7 @@ git config --global user.email ""
 2. 暂存区 Staging Area/Index
 3. 本地仓库 Local Repository
 工作区 --> git add 暂存区 --> git commit 本地仓库
-#####
+
 1. 未跟踪 Untrack 新创建但还没被git管理的文件
 2. 未修改 Unmodified 被git管理但文件内容还未修改的文件
 3. 已修改 Modified 已修改的文件但未放到暂存区 
@@ -47,6 +48,9 @@ git add     添加到暂存区
 git commit  提交到本地仓库 (只会提交暂存区的文件，不会提交工作区的文件)
 
 ##git commit 使用时需要 -m补充提交信息 否则会进入交互式界面默认vim编辑
+
+对于已经存在的文件 git commit -a -m +信息  可以以一条命令完成暂存和提交
+上述命令也可简写为 git commit -am +信息
 ```
 
 ####git reset回退版本 
@@ -55,14 +59,30 @@ git commit  提交到本地仓库 (只会提交暂存区的文件，不会提交
 ssh文件夹位置在/c/Users/用户/.ssh
 如果是第一次配置ssh，用户目录下可能没有.ssh
 打开git bash  输入命令
-####SSH配置和克隆仓库  
+
+
+####git remove 删除文件
+1. 可以用linux命令rm删除  删除后需要 git add 提交到暂存区 再git commit提交
+2. 也可以用git rm命令删除 删除后只需要用git commit提交即可
+![alt text](image-15.png)
+
+
+####.gitignore文件
+作用忽略掉一些不应该进入版本库的文件，比如系统或软件自动生成的文件，编译产生的中间文件和结果文件，运行时生成的日志文件 缓存文件 以及涉及身份密码的文件
+```
+vi .gitignore         ##编辑gitignore文件
+*.log                 ##忽略所有后缀为log的文件
+```
+
+<br>
+###SSH配置和克隆仓库  
 
 将代码push到远程仓库有两种方法一种是https，一种是SSH
 ![alt text](image-3.png)
 https在push时需要验证用户名和密码
 ssh方式不需要验证用户名和密码，但需要在Github上配置ssh公钥
 <br>
-#####ssh的配置
+####ssh的配置
 
 
 `ssh-keygen -t rsa -b 4096 ##指定密钥长度为4096`  
@@ -144,4 +164,21 @@ ctrl shift ~ 新建终端
 <br>
 <br>
 ***
-###分支
+###分支Branch
+git默认分支名是main  之前是master 后来因为歧视的原因改为main
+```
+git branch +分支名 创建新分支
+git checkout/switch  +分支名 切换分支
+git checkout + 文件名  恢复文件原来的状态
+```
+####合并分支  
+以dev分支合并到main分支为例
+1. 切换到main分支 git switch main
+2. git merge dev
+合并后 dev分支仍然存在 此时可以用 git branch -d dev 删除分支
+未合并的分支 可以使用 git branch -D +分支名 删除
+中止合并 git merge --abort
+
+
+
+来源 ：[B站一小时Git教程](https://www.bilibili.com/video/BV1HM411377j?p=19&vd_source=a2e2d75687d238b2f89e941ca0721797)
