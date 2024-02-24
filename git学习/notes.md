@@ -130,7 +130,7 @@ ctrl shift ~ 新建终端
 
 ![alt text](image-12.png)
 
-上方的提交即 git commit 操作 消息框中的信息即 git cmomit -m后的内容
+上方的提交即 git commit 操作 消息框中的信息即 git commit -m后的内容
 
 ![alt text](image-13.png)
 
