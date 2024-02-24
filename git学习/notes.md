@@ -116,15 +116,25 @@ ctrl shift ~ 新建终端
 
 打开资源管理器 修改文件后可以看到源码管理器多了角标
 ![alt text](image-10.png)
+
 选中项目后可以看到四个选项
 ![alt text](image-11.png)
+
 第一个选项是打开文件
 第二个选项是撤销修改
 第三个选项是暂存修改  相当于git add操作，保存到stage区
 第四个选项表明文件状态  是已修改状态
 进行暂存修改后会将文件转到stage区
 ![alt text](image-12.png)
+
 上方的提交即 git commit 操作 消息框中的信息即 git cmomit -m后的内容
 ![alt text](image-13.png)
+
 点击提交后会转到本地仓库
+![alt text](image-14.png)
+
+此时弹出的同步修改即将内容同步到远程仓库
+<br>
+<br>
+***
 ###分支
