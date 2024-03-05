@@ -249,3 +249,152 @@ python中数据容器有list(列表) tuple(元组) str(字符串) set(集合) di
 ` my_list[0]  #即取出it`
 反向索引 反向从-1开始
 `my_list[-3]   #取出it`
+#####列表的常用操作方法
+
+1方法的概念
+在Python中，如果将函数定义为class的成员，此时函数称为方法
+![alt text](image-10.png)
+
+2index方法
+查找某元素的下标
+语法 列表.index(元素)
+```
+mylist=['it','hello','Wang']
+index=mylist.index("it")
+print(index)
+第一个下标是0 所以会返回0
+```
+3修改元素
+语法 列表[下标]=值
+
+4插入元素
+语法 列表.insert(下标，元素) 在指定下标插入对应元素
+```
+mylist=['it','hello','Wang']
+index=mylist.index("it")
+mylist.insert(0,"nihao")
+print(mylist)
+
+将nihao插入到第0个元素 
+此时输出['nihao', 'it', 'hello', 'Wang']
+```
+5追加元素
+语法 列表.append(元素) 将元素追加到列表的尾部
+```
+mylist=['it','hello','Wang']
+mylist.append("黑马")
+print(mylist)
+```
+
+列表.extend(其他元素容器) 将其他容器的内容取出，以此添加到列表尾部
+```
+mylist=['it','hello','Wang']
+mylist2=[1,2,3]
+mylist.extend(mylist2)
+print(mylist)
+
+输出  ['it', 'hello', 'Wang', 1, 2, 3]
+```
+6元素删除
+语法 del  列表[下标]
+   或 列表.pop(下标)
+
+7删除某元素在列表中第一个匹配项
+列表.remove(元素)
+```
+mylist=['it','hello','Wang',"hello"]
+mylist.remove("hello")
+print(mylist)
+
+['it', 'Wang', 'hello'] 可见删除了第一个hello
+```
+8清空列表
+mylist.clear()
+
+9统计列表内某个元素的数量
+语法 列表.count(元素)
+
+10统计列表一共有多少元素
+语法 len(列表)
+
+
+总结
+![alt text](image-11.png)
+
+####列表的遍历
+把容器内的元素依次取出
+#####while循环
+![alt text](image-12.png)
+
+#####for循环
+    for 临时变量 in 数据容器:
+tips
+while 需要自定循环条件  while循环适用于任何循环场景
+for循环不需要自定循环条件 适用于数据容器的场景或简单的固定次数的循环场景
+
+####数据容器元组 Tuple
+
+列表是可以被修改的，如果想要内容不被修改，此时就需要元组
+即元组定义后就不可更改  元组是不可修改的列表
+
+######元组的定义
+定义元组使用**小括号**，用**逗号**隔开隔开数据
+![alt text](image-13.png)
+
+元组是不可修改的列表，操作方法和列表大同小异
+元组中的list可以修改
+
+####数据容器 字符串
+字符串是字符的容器，一个字符串可以放任意数量的字符。
+字符串和其他容器一样，也可以使用下标索引,字符串不可以修改
+```
+my_str="itheima and itcast"
+#index方法  查找位置
+value=my_str.index("and")
+
+#replace方法
+语法 字符串.replace("字符串1","字符串2")
+将字符串1的内容替换为字符串2    ***字符串本身不变 得到一个新字符串
+new_str=my_str.replace("it","程序")
+
+输出结果 my_str  itheima and itcast
+        new_str  程序heima and 程序cast
+
+
+#split方法
+语法 字符串.split(分隔符字符串)
+按照指定的分隔符字符串，将字符串划分为多个字符串，并存入列表对象中，字符串本身不变 得到一个列表对象
+my_str="hello heima itcast"
+str_list=my_str.split(" ")
+
+得到一个列表 ["hello","heima","itcast"]
+
+
+
+#strip方法
+语法 字符串.strip()
+去除前后空格 
+my_str=" itheima and itcast "
+my_str.strip()
+
+
+输出 itheima and itcast
+
+
+如果传入参数，则删除前后对应的内容
+my_str="itheima and itcast"
+my_Str.strip("i")
+
+输出 theima and itcast   只会处理前后的数据
+
+#c统计字符串中某字符串出现次数count
+my_str.count("it")
+
+
+#统计字符串的长度 len()
+len(my_str)
+```
+
+![alt text](image-14.png)
+
+作为数据容器，字符串只可以存储字符，不可以修改 
