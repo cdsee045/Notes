@@ -700,3 +700,36 @@ import time as t  给time改名为t
 代开命令提示符  
 pip install 包名称
 pip install -i 网址 包名称  从指定网站下载
+
+###第十章
+####json
+本质上是一个带有特定格式的字符串
+是一种在各个编程语言中流通的数据格式，负责不同编程语言的数据传递和交互，类似于国际通用语英语
+######json的数据格式
+字典或者 列表内嵌套的字典
+```
+{"name":"admin","age"=18}
+[{"name":"admin","age":18},{"name":"root","age":18},{"name":"张三","age":16}]
+```
+######python和json数据的相互化
+```
+#导入模块
+import json
+
+#准备符合json格式要求的python数据
+data=[{"name":"admin","age":18},{"name":"张三","age":16}]
+
+#通过json.dumps(data)把pyton数据转化为json数据
+data=json.dumps(data)
+
+#通过json.loads(data)把json数据转化为python数据
+data=json.loads(data)
+```
+
+```
+#导入模块 
+
+
+
+
+```
