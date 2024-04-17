@@ -1,7 +1,35 @@
-#第一阶段
-####注释
+## day1
+#### 与C语言的的区别
+引入了<font color=red>命名空间</font>的概念
+输出方式不同，<font color=red>cout</font>是一个<font color=red>流对象</font> 不同于printf库函数
+C语言中的左移运算符 << 在C++中是<font color=red>输出流运算符</font>
 
-####常量
+#### 命名空间
+背景: 在两个公司进行合作时，很大概率发生命名的冲突(变量名相同, 函数名相同, 或者struct相同)
+
+C语言解决方法: 对于所有变量或者函数在命名时会加上公司信息 
+如 google 和 facebook
+int google_num=1； int facebook_num=2
+C++解决方法: 使用命名空间
+namespace google{
+  int num; int register();
+}
+
+#### 命名空间的使用
+```
+// :: 指作用域限定符
+// 命名空间中定义的变量 函数  对象 都称为命名空间的一个实体
+
+namespace::func();
+
+例如
+namespace wd{
+int num=1;
+void display(){cout<<"nihao";}
+}
+wd::display  // 访问wd中的display函数
+```
+#### 常量
 用于记录程序中不可更改的数据
 - #define宏常量    
      语法:  #define 变量名 值
