@@ -1,12 +1,12 @@
 [TOC]
-###scoop
-####添加软件源 Bucket
+### scoop
+#### 添加软件源 Bucket
 ```
 scoop bucket add extras ##添加官方软件源 extras 
 scoop bucket add dorado https://github.com/h404bi/dorado  ##添加第三方 bucket源dorado
 ```
 
-####安装与卸载软件
+#### 安装与卸载软件
 ```
 scoop search # 搜索 APP
 scoop install <app>   # 安装 APP
@@ -18,7 +18,7 @@ scoop status # 检查哪些软件有更新
 ***
 <br>
 
-####软件更新
+#### 软件更新
 ```
 scoop update # 更新 Scoop 自身
 
@@ -35,7 +35,7 @@ scoop unhold <app>
 ***
 <br>
 
-####清除缓存与旧版本
+#### 清除缓存与旧版本
 ```
 scoop cache rm <app>  # 清除指定程序的下载缓存
 scoop cache rm *      # 清除所有缓存

@@ -1,6 +1,6 @@
 [TOC]
 
-###git配置
+### git配置
 >设置用户名和邮箱
 
 安装git后首先要设置用户名称和e-mail地址
@@ -27,8 +27,8 @@ git config --global user.email ""
 
 创建一个文件夹  git init初始化仓库
 
-###工作区域和文件状态
-#####本地数据分为三个区
+### 工作区域和文件状态
+##### 本地数据分为三个区
 1. 工作区 Working Directory   
 2. 暂存区 Staging Area/Index
 3. 本地仓库 Local Repository
@@ -41,7 +41,7 @@ git config --global user.email ""
 
 ![alt text](image-2.png)
 
-####添加和提交文件
+#### 添加和提交文件
 ```
 git init     创建仓库
 git status  查看仓库状态
@@ -54,7 +54,7 @@ git commit  提交到本地仓库 (只会提交暂存区的文件，不会提交
 上述命令也可简写为 git commit -am +信息
 ```
 
-####git reset回退版本 
+#### git reset回退版本 
 <br>
 
 ssh文件夹位置在/c/Users/用户/.ssh
@@ -62,13 +62,13 @@ ssh文件夹位置在/c/Users/用户/.ssh
 打开git bash  输入命令
 
 
-####git remove 删除文件
+#### git remove 删除文件
 1. 可以用linux命令rm删除  删除后需要 git add 提交到暂存区 再git commit提交
 2. 也可以用git rm命令删除 删除后只需要用git commit提交即可
 ![alt text](image-15.png)
 
 
-####.gitignore文件
+#### gitignore文件
 作用忽略掉一些不应该进入版本库的文件，比如系统或软件自动生成的文件，编译产生的中间文件和结果文件，运行时生成的日志文件 缓存文件 以及涉及身份密码的文件
 ```
 vi .gitignore         ##编辑gitignore文件
@@ -77,7 +77,7 @@ vi .gitignore         ##编辑gitignore文件
 
 <br>
 
-###SSH配置和克隆仓库  
+### SSH配置和克隆仓库  
 
 将代码push到远程仓库有两种方法一种是https，一种是SSH
 ![alt text](image-3.png)
@@ -105,7 +105,7 @@ GitHub --> 头像 setting --> SSH and GPG keys
 ![alt text](image-8.png)
 <br>
 
-###关联本地仓库和远程仓库
+### 关联本地仓库和远程仓库
 github中新建仓库
 ![alt text](image-9.png)
 ```
@@ -134,7 +134,7 @@ git push <远程仓库名><本地分支名>:<远程分支名>
 
 ***
 
-###vscode中git的使用
+### vscode中git的使用
 
 快捷键
 ctrl shift p 打开命令面板
@@ -168,14 +168,14 @@ ctrl shift ~ 新建终端
 <br>
 <br>
 ***
-###分支Branch
+### 分支Branch
 git默认分支名是main  之前是master 后来因为歧视的原因改为main
 ```
 git branch +分支名 创建新分支
 git checkout/switch  +分支名 切换分支
 git checkout + 文件名  恢复文件原来的状态
 ```
-####合并分支  
+#### 合并分支  
 以dev分支合并到main分支为例
 1. 切换到main分支 git switch main
 2. git merge dev
